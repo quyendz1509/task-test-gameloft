@@ -1,0 +1,21 @@
+<script>
+	const input = 'accczxdddd';
+	const encode = (input) =>{
+		let count = 1; // biến đếm bắt đầu = 1
+		var encd = ''; // biến rỗng
+		//  vòng lặp chuỗi nhập vào để đếm số ký tự
+		for (var i = 0; i < input.length; i++) {
+			// vòng lặp tìm kiếm ký tự nếu giống thì + 1 không thì break
+			for (var j = i; j < input.length; j++) {
+				if(input[i] !== input[j+1] ) break;
+				count++;
+				i++;
+			}
+			 // nối chuỗi nếu mà input[i]: vòng lặp đầu dưới 1 ký tự thì chỉ xuất ký tự.
+// trường hợp trên 2 sẽ nối thêm biến đêm
+encd += count === 1 ? input[i] : count + input[i];
+}
+return encd.toUpperCase();
+}
+console.log('Input:'+input,'Output:'+encode(input));
+</script>

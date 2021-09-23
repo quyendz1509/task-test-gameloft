@@ -1,0 +1,17 @@
+<script>
+	const input = 5;
+	const array = [1,2,3];
+	const calculate = function(input){
+		var test = '';
+		for (var i = 0; i < array.length; i++) {
+			for (var j= i; j < array.length; j++) {
+				if (array[j] + array[i] === input)
+					test += [array[i], array[j]];
+			}
+			
+		}
+		return test;
+	}
+	
+	console.log('Output:'+calculate(input), 'Input: '+input);
+</script>
